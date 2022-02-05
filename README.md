@@ -39,7 +39,7 @@ enforce 모드와 complain모드 두가지가 존재한다. enforce 모드는 �
 ```sh
 sudo aa-status // AppArmor 상태확인
 ```
-##Simple Setup
+## Simple Setup
 ```sh
 sudo ufw status // UFW 작동 확인
 ```
@@ -56,4 +56,16 @@ id username // 유저 정보 확인
 getent group sudo
 getent group user42
 ```
-password policy 확인 
+#### password policy 확인 절차
+```sh
+sudo adduser username // 새로운 유저 생성
+sudo chage -l username  // 사용자 패스워드 만기 정보
+nano /etc/login.defs, nano /etc/pam.d/common-password // 패스워드 정책 수정한 파일
+sudo groupadd evaluating  // 그룹 추가 
+sudo adduser username evaluating  // 그룹에 유저 추가
+id username // 유저 정보 확인
+```
+![그림1](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fdxh0DJ%2Fbtq53vByUhn%2FU3J7rgVSDIJo4SGuNyIStK%2Fimg.png)
+## Hostname and partitions
+```sh
+hostname // hostname 
