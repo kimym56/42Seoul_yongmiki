@@ -6,7 +6,7 @@
 /*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 03:56:30 by yongmiki          #+#    #+#             */
-/*   Updated: 2022/02/16 22:13:35 by yongmiki         ###   ########.fr       */
+/*   Updated: 2022/02/16 22:33:25 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ static void	handle_signal(int signal)
 {
 	g_receive_signal = signal;
 }
-
 
 void	set_signal(void)
 {

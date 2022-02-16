@@ -6,14 +6,13 @@
 /*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 21:28:42 by yongmiki          #+#    #+#             */
-/*   Updated: 2022/02/16 22:14:02 by yongmiki         ###   ########.fr       */
+/*   Updated: 2022/02/16 22:25:22 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/server.h"
 
 int		g_receive_signal;
-
 
 void	exit_server(t_server_vars *vars, char *message, bool success)
 {
@@ -30,14 +29,12 @@ void	exit_server(t_server_vars *vars, char *message, bool success)
 	}
 }
 
-
 static void	check_argument(int argc, char **argv, t_server_vars *vars)
 {
 	(void)argv;
 	if (argc != 1)
 		exit_server(vars, "USAGE: ./server", false);
 }
-
 
 int	main(int argc, char **argv)
 {
