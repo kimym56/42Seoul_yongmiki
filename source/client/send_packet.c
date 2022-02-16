@@ -6,7 +6,7 @@
 /*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 00:10:19 by yongmiki          #+#    #+#             */
-/*   Updated: 2022/02/16 22:12:48 by yongmiki         ###   ########.fr       */
+/*   Updated: 2022/02/16 22:23:31 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ static void	wait_receive_ack_pid(void)
 		exit_client("ERROR: Fail to send CLIENT ProcessID !!", false);
 	g_receive_signal = 0;
 }
-
 
 static void	wait_receive_ack_message(int send_signal)
 {
@@ -38,7 +37,6 @@ static void	wait_receive_ack_message(int send_signal)
 		exit_client("ERROR: Fail to send Message !!", false);
 	g_receive_signal = 0;
 }
-
 
 static void	send_bits(int32_t pid_server, int32_t send_bits,
 											int send_bit_count, bool ack_mode)

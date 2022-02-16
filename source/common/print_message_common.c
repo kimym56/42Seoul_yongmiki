@@ -6,12 +6,11 @@
 /*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 22:21:53 by yongmiki          #+#    #+#             */
-/*   Updated: 2022/02/16 22:13:19 by yongmiki         ###   ########.fr       */
+/*   Updated: 2022/02/16 22:23:42 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/server.h"
-
 
 void	print_success_message(char *message)
 {
