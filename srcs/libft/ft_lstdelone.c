@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/07 04:36:35 by sfournio          #+#    #+#             */
-/*   Updated: 2020/11/23 02:13:06 by sfournio         ###   ########lyon.fr   */
+/*   Created: 2021/05/07 13:13:58 by yongmiki          #+#    #+#             */
+/*   Updated: 2022/03/09 21:03:37 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(int))
 {
 	if (!lst || !del)
 		return ;

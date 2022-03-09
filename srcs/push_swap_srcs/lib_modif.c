@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lib_modif.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/04 13:46:45 by sfournio          #+#    #+#             */
-/*   Updated: 2021/04/16 16:01:39 by sfournio         ###   ########lyon.fr   */
+/*   Created: 2022/02/21 13:46:45 by yongmiki          #+#    #+#             */
+/*   Updated: 2022/03/09 21:07:57 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/04 13:46:32 by sfournio          #+#    #+#             */
-/*   Updated: 2021/03/19 10:32:02 by sfournio         ###   ########lyon.fr   */
+/*   Created: 2021/05/07 11:12:43 by yongmiki          #+#    #+#             */
+/*   Updated: 2022/03/09 21:04:57 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

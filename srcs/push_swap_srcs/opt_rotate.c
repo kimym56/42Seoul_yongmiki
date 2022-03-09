@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   opt_rotate.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/02 15:45:55 by sfournio          #+#    #+#             */
-/*   Updated: 2021/04/16 12:37:04 by sfournio         ###   ########lyon.fr   */
+/*   Created: 2022/02/21 15:45:55 by yongmiki          #+#    #+#             */
+/*   Updated: 2022/03/09 21:08:46 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

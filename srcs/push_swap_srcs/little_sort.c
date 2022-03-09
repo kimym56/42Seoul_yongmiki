@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   little_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/07 17:00:40 by sfournio          #+#    #+#             */
-/*   Updated: 2021/04/13 10:38:52 by sfournio         ###   ########lyon.fr   */
+/*   Created: 2022/02/21 17:00:40 by yongmiki          #+#    #+#             */
+/*   Updated: 2022/03/09 21:08:14 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,21 @@ void	algo_three(t_global *global, int one, int two, int three)
 	if (one < two && two < three)
 		return ;
 	else if (three < one && one < two)
-		do_opt("rra", &global->stack_a, &rra, global);
+		do_opt("rra", &global->stack_a, &rra);
 	else if (two < three && three < one)
-		do_opt("ra", &global->stack_a, &ra, global);
+		do_opt("ra", &global->stack_a, &ra);
 	else if (one < three && three < two)
 	{
-		do_opt("rra", &global->stack_a, &rra, global);
-		do_opt("sa", &global->stack_a, &sa, global);
+		do_opt("rra", &global->stack_a, &rra);
+		do_opt("sa", &global->stack_a, &sa);
 	}
 	else if (three < two && two < one)
 	{
-		do_opt("sa", &global->stack_a, &sa, global);
-		do_opt("rra", &global->stack_a, &rra, global);
+		do_opt("sa", &global->stack_a, &sa);
+		do_opt("rra", &global->stack_a, &rra);
 	}
 	else
-		do_opt("sa", &global->stack_a, &sa, global);
+		do_opt("sa", &global->stack_a, &sa);
 }
 
 void	sort_three(t_global *global)
@@ -42,17 +42,17 @@ void	sort_three(t_global *global)
 
 	if (!global->stack_a)
 		return ;
-	one = (int)global->stack_a->content;
+	one = global->stack_a->content;
 	if (!(global->stack_a->next))
 		return ;
-	two = (int)global->stack_a->next->content;
+	two = global->stack_a->next->content;
 	if (!global->stack_a->next->next)
 	{
 		if (one > two)
-			do_opt("sa", &global->stack_a, &sa, global);
+			do_opt("sa", &global->stack_a, &sa);
 		return ;
 	}
-	three = (int)global->stack_a->next->next->content;
+	three = global->stack_a->next->next->content;
 	algo_three(global, one, two, three);
 }
 
@@ -65,12 +65,12 @@ void	put_min_top(int pos, t_global *global)
 	{
 		pos = size - pos;
 		while (pos-- != 0)
-			do_opt("rra", &global->stack_a, &rra, global);
+			do_opt("rra", &global->stack_a, &rra);
 	}
 	else if (pos <= size / 2)
 	{
 		while (pos-- != 0)
-			do_opt("ra", &global->stack_a, &ra, global);
+			do_opt("ra", &global->stack_a, &ra);
 	}
 }
 
@@ -83,14 +83,14 @@ int	get_min_pos(t_list *lst)
 
 	tmp = lst;
 	i = 0;
-	min = (int)tmp->content;
+	min = tmp->content;
 	save = 0;
 	while (tmp)
 	{
-		if ((int)tmp->content <= min)
+		if (tmp->content <= min)
 		{
 			save = i;
-			min = (int)tmp->content;
+			min = tmp->content;
 		}
 		tmp = tmp->next;
 		i++;

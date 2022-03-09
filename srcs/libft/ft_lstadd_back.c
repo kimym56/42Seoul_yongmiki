@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/07 04:24:48 by sfournio          #+#    #+#             */
-/*   Updated: 2020/11/23 02:12:59 by sfournio         ###   ########lyon.fr   */
+/*   Created: 2021/05/07 13:10:50 by yongmiki          #+#    #+#             */
+/*   Updated: 2022/03/09 21:02:41 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

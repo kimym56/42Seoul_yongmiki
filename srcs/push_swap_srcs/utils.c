@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/04 13:46:45 by sfournio          #+#    #+#             */
-/*   Updated: 2021/04/16 13:20:12 by sfournio         ###   ########lyon.fr   */
+/*   Created: 2022/02/21 13:46:45 by yongmiki          #+#    #+#             */
+/*   Updated: 2022/03/09 21:09:36 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,34 +23,19 @@ void	errors(int type, t_list **stack_a, t_list **stack_b)
 	exit(EXIT_FAILURE);
 }
 
-void	do_opt(char *opt, t_list **stack, void (*f)(t_list **stack),
-		t_global *global)
+void	do_opt(char *opt, t_list **stack, void (*f)(t_list **stack))
 {
 	f(stack);
-	if (!global->b)
-		printf("%s\n", opt);
-	else
-	{
-		printf("\e[2J");
-		ft_lstprint(global->stack_a, global->stack_b);
-		printf("\n\n");
-		usleep(1000000);
-	}
+	ft_putstr_fd(opt, 1);
+	ft_putstr_fd("\n", 1);
 }
 
 void	do_push(char *opt, t_global *global, void (*f)(t_list **stack_a,
 		t_list **stack_b))
 {
 	f(&global->stack_a, &global->stack_b);
-	if (!global->b)
-		printf("%s\n", opt);
-	else
-	{
-		printf("\e[2J");
-		ft_lstprint(global->stack_a, global->stack_b);
-		printf("\n\n");
-		usleep(1000000);
-	}
+	ft_putstr_fd(opt, 1);
+	ft_putstr_fd("\n", 1);
 }
 
 void	freeall(t_global *global, int **tab)

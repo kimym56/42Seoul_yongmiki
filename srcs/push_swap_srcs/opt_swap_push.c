@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   opt_swap_push.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/02 14:12:35 by sfournio          #+#    #+#             */
-/*   Updated: 2021/04/06 16:24:05 by sfournio         ###   ########lyon.fr   */
+/*   Created: 2022/02/21 14:12:35 by yongmiki          #+#    #+#             */
+/*   Updated: 2022/03/09 21:08:56 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

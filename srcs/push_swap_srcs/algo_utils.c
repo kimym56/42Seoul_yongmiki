@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algo_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/16 15:41:02 by sfournio          #+#    #+#             */
-/*   Updated: 2021/04/17 14:21:55 by sfournio         ###   ########lyon.fr   */
+/*   Created: 2022/02/21 15:41:02 by yongmiki          #+#    #+#             */
+/*   Updated: 2022/03/09 21:08:04 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,14 @@ int	get_max_pos(t_list *lst)
 
 	tmp = lst;
 	i = 0;
-	max = (int)tmp->content;
+	max = tmp->content;
 	save = 0;
 	while (tmp)
 	{
-		if ((int)tmp->content > max)
+		if (tmp->content > max)
 		{
 			save = i;
-			max = (int)tmp->content;
+			max = tmp->content;
 		}
 		tmp = tmp->next;
 		i++;
@@ -60,7 +60,7 @@ int	*fill_tab(t_list *lst, int *tab, int size)
 	i = 0;
 	while (lst)
 	{
-		tab[i] = (int)lst->content;
+		tab[i] = lst->content;
 		i++;
 		lst = lst->next;
 	}

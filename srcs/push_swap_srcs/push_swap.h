@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/24 16:23:41 by sfournio          #+#    #+#             */
-/*   Updated: 2021/04/17 14:21:59 by sfournio         ###   ########lyon.fr   */
+/*   Created: 2022/02/21 16:23:41 by yongmiki          #+#    #+#             */
+/*   Updated: 2022/03/09 21:09:23 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,12 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
-# include <stdio.h>
 # include "../libft/libft.h"
 
 typedef struct s_global
 {
 	t_list	*stack_a;
 	t_list	*stack_b;
-	int		b;
 	int		range;
 	int		size;
 }			t_global;
@@ -35,15 +33,14 @@ typedef struct s_global
 int			is_same(t_list *lst, int val);
 int			is_integers(char *str);
 int			free_table(char **str, int j);
-int			check_args(char **av, t_list **stack_a, int bonus, int ac);
-int			countnum(char **av, int bonus, int ac);
-void		ft_lstprint(t_list *lst, t_list *lst2);
+int			check_args(char **av, t_list **stack_a);
+int			countnum(char **av);
 
 /*
 **	Opperator
 */
 void		do_opt(char *opt, t_list **stack,
-				void (*f)(t_list **stack), t_global *global);
+				void (*f)(t_list **stack));
 void		do_push(char *opt, t_global *global,
 				void (*f)(t_list **stack_a, t_list **stack_b));
 void		pa(t_list **stack_a, t_list **stack_b);
@@ -76,9 +73,9 @@ void		put_max_top(int pos, t_global *global);
 */
 
 void		errors(int type, t_list **stack_a, t_list **stack_b);
-void		lstdel(void *content);
+void		lstdel(int content);
 int			ft_atoi_modif(const char *str, int *max);
 int			ft_verif(t_list *lst, t_list *lst2);
-long long	get_lst_index(t_list *stack, int pos);
+long long	get_lst_content(t_list *stack, int pos);
 
 #endif

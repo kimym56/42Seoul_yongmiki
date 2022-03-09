@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_algo.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/12 16:00:46 by sfournio          #+#    #+#             */
-/*   Updated: 2021/04/17 14:23:58 by sfournio         ###   ########lyon.fr   */
+/*   Created: 2022/02/21 16:00:46 by yongmiki          #+#    #+#             */
+/*   Updated: 2022/03/09 21:08:36 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	found_instruction(int i, int j, t_global *global)
 	{
 		while (i)
 		{
-			do_opt("ra", &global->stack_a, &ra, global);
+			do_opt("ra", &global->stack_a, &ra);
 			i--;
 		}
 		do_push("pb", global, &pb);
@@ -27,7 +27,7 @@ void	found_instruction(int i, int j, t_global *global)
 	{
 		while (j < ft_lstsize(global->stack_a))
 		{
-			do_opt("rra", &global->stack_a, &rra, global);
+			do_opt("rra", &global->stack_a, &rra);
 			j++;
 		}
 		do_push("pb", global, &pb);
@@ -37,18 +37,18 @@ void	found_instruction(int i, int j, t_global *global)
 long long	found_best(int min, int max, t_global *global, int *j)
 {
 	long long	best2;
-	long long	index;
+	long long	content;
 
 	*j = ft_lstsize(global->stack_a);
 	best2 = -2147483649;
 	while (--*j >= ft_lstsize(global->stack_a) / 2)
 	{
-		index = get_lst_index(global->stack_a, *j);
-		if (index == -2147483649)
+		content = get_lst_content(global->stack_a, *j);
+		if (content == -2147483649)
 			break ;
-		if (index && index >= min && index <= max)
+		if (content && content >= min && content <= max)
 		{
-			best2 = index;
+			best2 = content;
 			break ;
 		}
 	}
@@ -71,9 +71,9 @@ void	rotate_push(t_global *global, int min, int max)
 		best = -2147483649;
 		while (++i < ft_lstsize(global->stack_a) / 2 && tmp)
 		{
-			if ((int)tmp->content >= min && (int)tmp->content <= max)
+			if (tmp->content >= min && tmp->content <= max)
 			{
-				best = (int)tmp->content;
+				best = tmp->content;
 				break ;
 			}
 			tmp = tmp->next;
@@ -93,12 +93,12 @@ void	put_max_top(int pos, t_global *global)
 	{
 		pos = size - pos;
 		while (pos-- != 0)
-			do_opt("rrb", &global->stack_b, &rrb, global);
+			do_opt("rrb", &global->stack_b, &rrb);
 	}
 	else if (pos <= size / 2)
 	{
 		while (pos-- != 0)
-			do_opt("rb", &global->stack_b, &rb, global);
+			do_opt("rb", &global->stack_b, &rb);
 	}
 }
 
@@ -124,7 +124,7 @@ void	main_algo(t_global *global)
 			max = tab[global->size - 1];
 		else
 			max = tab[i * global->range + global->range - 1];
-		printf("");
+		ft_putstr_fd("", 1);
 		rotate_push(global, min, max);
 		i++;
 	}

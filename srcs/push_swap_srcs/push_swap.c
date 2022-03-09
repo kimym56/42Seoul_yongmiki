@@ -3,11 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/24 16:22:56 by sfournio          #+#    #+#             */
-/*   Updated: 2021/04/02 14:11:04 by sfournio         ###   ########lyon.fr   */
-
+/*   Created: 2022/02/21 16:22:56 by yongmiki          #+#    #+#             */
+/*   Updated: 2022/03/09 21:09:14 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +19,10 @@ int	main(int ac, char **av)
 	t_list		*stack_b;
 	t_global	global;
 
-	global.b = 0;
-	if (ft_strncmp(av[ac - 1], "-v", 3) == 0)
-		global.b = 1;
 	stack_a = NULL;
 	stack_b = NULL;
-	count = countnum(av, global.b, ac);
-	if (count == -1 || ac == 1 || check_args(av, &stack_a, global.b, ac) == -1)
+	count = countnum(av);
+	if (count == -1 || ac == 1 || check_args(av, &stack_a) == -1)
 		errors(1, &stack_a, &stack_b);
 	global.stack_a = stack_a;
 	global.stack_b = stack_b;

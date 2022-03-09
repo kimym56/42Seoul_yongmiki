@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/05 21:01:56 by sfournio          #+#    #+#             */
-/*   Updated: 2021/03/19 10:16:02 by sfournio         ###   ########lyon.fr   */
+/*   Created: 2021/05/07 12:52:42 by yongmiki          #+#    #+#             */
+/*   Updated: 2022/03/09 21:04:48 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

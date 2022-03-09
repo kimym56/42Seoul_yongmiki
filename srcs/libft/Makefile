@@ -3,40 +3,19 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+         #
+#    By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/11/04 14:25:18 by sfournio          #+#    #+#              #
-#    Updated: 2021/04/17 14:57:28 by sfournio         ###   ########lyon.fr    #
+#    Created: 2021/05/07 13:41:30 by yongmiki          #+#    #+#              #
+#    Updated: 2022/03/09 21:06:20 by yongmiki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = 	ft_strlen.c ft_strdup.c \
-		ft_atoi.c ft_isalnum.c \
-		ft_isalpha.c ft_isascii.c \
-		ft_isdigit.c ft_isprint.c \
-		ft_split.c ft_toupper.c \
-		ft_strdup.c ft_putnbr_fd.c \
-		ft_strcmp.c \
-		ft_strncmp.c ft_tolower.c \
-		ft_strlcat.c ft_strlcpy.c \
-		ft_strrchr.c ft_strchr.c \
-		ft_strnstr.c ft_memset.c \
-		ft_memcpy.c ft_bzero.c \
-		ft_memccpy.c ft_memchr.c \
-		ft_memmove.c ft_memcmp.c \
-		ft_calloc.c ft_itoa.c \
-		ft_strjoin.c ft_substr.c \
-		ft_strtrim.c ft_strmapi.c \
-		ft_putchar_fd.c ft_putstr_fd.c \
-		ft_putendl_fd.c get_next_line.c \
-		ft_strjoinfree.c ft_strljoinfree.c \
-		ft_strljoin.c
+SRCS = 	ft_split.c ft_putstr_fd.c
 
 SRCBONUS = 	ft_lstnew.c ft_lstadd_front.c \
 			ft_lstsize.c ft_lstlast.c \
 			ft_lstadd_back.c ft_lstdelone.c \
-			ft_lstclear.c ft_lstiter.c \
-			ft_lstmap.c
+			ft_lstclear.c 
 
 OBJBONUS = ${SRCBONUS:.c=.o}
 

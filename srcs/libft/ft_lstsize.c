@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/06 15:27:58 by sfournio          #+#    #+#             */
-/*   Updated: 2021/03/19 10:13:59 by sfournio         ###   ########lyon.fr   */
+/*   Created: 2021/05/07 13:07:48 by yongmiki          #+#    #+#             */
+/*   Updated: 2022/03/09 21:04:25 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checks.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/26 16:42:32 by sfournio          #+#    #+#             */
-/*   Updated: 2021/04/16 16:00:42 by sfournio         ###   ########lyon.fr   */
+/*   Created: 2022/02/21 16:42:32 by yongmiki          #+#    #+#             */
+/*   Updated: 2022/03/09 21:13:22 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	free_str(char **str, int j)
 	return (-1);
 }
 
-int	check_args(char **av, t_list **stack_a, int bonus, int ac)
+int	check_args(char **av, t_list **stack_a)
 {
 	int		i;
 	int		j;
@@ -39,7 +39,7 @@ int	check_args(char **av, t_list **stack_a, int bonus, int ac)
 	int		max;
 
 	i = 0;
-	while (av[++i] && (!bonus || i < ac - 1))
+	while (av[++i])
 	{
 		j = -1;
 		str = ft_split(av[i], ' ');
@@ -50,7 +50,7 @@ int	check_args(char **av, t_list **stack_a, int bonus, int ac)
 			free(str[j]);
 			if (max == 1 || is_same(*stack_a, save))
 				return (free_str(str, j + 1));
-			ft_lstadd_back(stack_a, ft_lstnew((void *)(size_t)save));
+			ft_lstadd_back(stack_a, ft_lstnew(save));
 		}
 		free(str);
 	}
@@ -70,7 +70,7 @@ int	check_signe(char *str)
 	return (1);
 }
 
-int	countnum(char **av, int bonus, int ac)
+int	countnum(char **av)
 {
 	int		i;
 	int		j;
@@ -79,7 +79,7 @@ int	countnum(char **av, int bonus, int ac)
 
 	count = 0;
 	i = 0;
-	while (av[++i] && (!bonus || i < ac - 1))
+	while (av[++i])
 	{
 		j = -1;
 		str = ft_split(av[i], ' ');
