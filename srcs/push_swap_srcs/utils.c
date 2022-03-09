@@ -6,7 +6,7 @@
 /*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 13:46:45 by yongmiki          #+#    #+#             */
-/*   Updated: 2022/03/09 21:09:36 by yongmiki         ###   ########.fr       */
+/*   Updated: 2022/03/09 21:40:38 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ void	errors(int type, t_list **stack_a, t_list **stack_b)
 	ft_lstclear(stack_a, lstdel);
 	ft_lstclear(stack_b, lstdel);
 	if (type == 1)
-		ft_putstr_fd("Error\n", 1);
-	if (type == 2)
-		ft_putstr_fd("KO\n", 1);
+		ft_putstr_fd("Error\n", 2);
 	exit(EXIT_FAILURE);
 }
 
