@@ -11,7 +11,16 @@ because from one integers configuration to another, the most efficient sorting a
 can differ.
 
 ## Usage
-```
-make
-./push_swap 4 3 2 1
+```bash
+$>make
+$>./push_swap 4 3 2 1
+rra
+pb
+sa
+rra
+pa
+$>ARG="4 67 3 87 23"; ./push_swap $ARG | wc -l
+6
+$>ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_OS $ARG
+OK
 ```
