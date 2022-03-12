@@ -6,7 +6,7 @@
 /*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 16:42:32 by yongmiki          #+#    #+#             */
-/*   Updated: 2022/03/09 21:53:30 by yongmiki         ###   ########.fr       */
+/*   Updated: 2022/03/12 20:49:33 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ int	check_args(char **av, t_list **stack_a)
 			ft_lstadd_back(stack_a, ft_lstnew(save));
 		}
 		free(str);
+		if (j == 0)
+			return (-1);
 	}
 	return (1);
 }
