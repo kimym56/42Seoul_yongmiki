@@ -6,7 +6,7 @@
 /*   By: yongmiki <yongmiki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 17:34:24 by yongmiki          #+#    #+#             */
-/*   Updated: 2022/03/19 02:15:16 by yongmiki         ###   ########.fr       */
+/*   Updated: 2022/03/19 16:58:32 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	keyboard_w_s(t_complete *game, int movement)
 			return (0);
 		game->map[j - 1][i] = '0';
 	}
-	printf("Steps: %i\n", game->counter);
+	printf("Number of movements: %i\n", game->counter);
 	printf("Item Left: %i\n", game->collectables);
 	return (1);
 }
@@ -65,8 +65,8 @@ static int	keyboard_a_d(t_complete *game, int movement)
 			return (0);
 		game->map[j][i - 1] = '0';
 	}
-	printf("Steps: %i\n", game->counter);
-	printf("Item Remaining: %i\n", game->collectables);
+	printf("Number of movements: %i\n", game->counter);
+	printf("Item Left: %i\n", game->collectables);
 	return (1);
 }
 
