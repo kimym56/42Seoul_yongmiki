@@ -8,3 +8,10 @@ Historically, "philosophy" encompassed any body of knowledge. From the time of A
 In the 19th century, the growth of modern research universities led academic philos- ophy and other disciplines to professionalize and specialize. In the modern era, some investigations that were traditionally part of philosophy became separate academic dis- ciplines, including psychology, sociology, linguistics, and economics.
 
 Other investigations closely related to art, science, politics, or other pursuits remained part of philosophy. For example, is beauty objective or subjective? Are there many sci- entific methods or just one? Is political utopia a hopeful dream or hopeless fantasy? Major sub-fields of academic philosophy include metaphysics ("concerned with the fun- damental nature of reality and being"), epistemology (about the "nature and grounds of knowledge [and]... its limits and validity"), ethics, aesthetics, political philosophy, logic and philosophy of science.
+
+# Usage
+#### ./philo [number_of_philosophers] [time_to_die] [time_to_eat] [time_to_sleep] [(option) number_of_times_each_philosopher_must_eat]
+```bash
+make
+./philo 4 310 200 100
+```
