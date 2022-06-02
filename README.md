@@ -1,5 +1,6 @@
 # 42Seoul_so_long
-[![yongmiki's 42 so_long Score](https://badge42.vercel.app/api/v2/cl3x3n267003009mk7325wwen/project/2528090)](https://github.com/JaeSeoKim/badge42)
+[![yongmiki's 42 Philosophers Score](https://badge42.vercel.app/api/v2/cl3x3n267003009mk7325wwen/project/2535632)](https://github.com/JaeSeoKim/badge42)
+
 This project is a very small 2D game. It is built to make you work with textures, sprites. And some very basic gameplay elements.
 ## Goals
 This project’s objectives are similar to all this first year’s objectives: Rigor, use of C, use
