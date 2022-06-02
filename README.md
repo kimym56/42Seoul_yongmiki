@@ -64,5 +64,5 @@ of your choice.
 ## Usage
 ```shell
 make
-./so_long maps/[any .ber map respecting the criterias]
+./so_long game_maps/maps1.ber
 ```
