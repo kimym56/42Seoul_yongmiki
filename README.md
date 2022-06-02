@@ -1,4 +1,6 @@
 # 42Seoul_push_swap
+[![yongmiki's 42 push_swap Score](https://badge42.vercel.app/api/v2/cl3x3n267003009mk7325wwen/project/2508195)](https://github.com/JaeSeoKim/badge42)
+
 To write a sorting algorithm is always a very important step in a coder’s life, because it
 is often the first encounter with the concept of complexity.
 Sorting algorithms, and their complexities are part of the classic questions discussed
