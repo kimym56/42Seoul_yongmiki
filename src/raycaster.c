@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   raycaster.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yongmiki <yongmiki@42seoul.kr>             +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 18:15:16 by yongmiki          #+#    #+#             */
-/*   Updated: 2022/08/02 18:15:17 by yongmiki         ###   ########.fr       */
+/*   Updated: 2022/08/03 19:00:57 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,25 +36,25 @@ static void	raycaster_get_sides(t_vars *vars)
 	{
 		vars->step_x = -1;
 		vars->side_dist_x = (player.x - vars->map_x) * vars->delta_dist_x;
-		vars->vertical = DIRECTION_NORTH;
+		vars->vertical = DIRECTION_WEST;
 	}
 	else
 	{
 		vars->step_x = 1;
 		vars->side_dist_x = (vars->map_x + 1.0 - player.x) * vars->delta_dist_x;
-		vars->vertical = DIRECTION_SOUTH;
+		vars->vertical = DIRECTION_EAST;
 	}
 	if (vars->ray_dir_y < 0)
 	{
 		vars->step_y = -1;
 		vars->side_dist_y = (player.y - vars->map_y) * vars->delta_dist_y;
-		vars->horizontal = DIRECTION_WEST;
+		vars->horizontal = DIRECTION_NORTH;
 	}
 	else
 	{
 		vars->step_y = 1;
 		vars->side_dist_y = (vars->map_y + 1.0 - player.y) * vars->delta_dist_y;
-		vars->horizontal = DIRECTION_EAST;
+		vars->horizontal = DIRECTION_SOUTH;
 	}
 }
 

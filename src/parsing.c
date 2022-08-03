@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yongmiki <yongmiki@42seoul.kr>             +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 18:13:50 by yongmiki          #+#    #+#             */
-/*   Updated: 2022/08/02 18:14:10 by yongmiki         ###   ########.fr       */
+/*   Updated: 2022/08/03 19:22:44 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,13 @@ void	parse_cell(int i, int j)
 		player.count++;
 		if (player.count == 1)
 		{
-			player.x = j;
-			player.y = i;
+			player.x = j + 0.5;
+			player.y = i + 0.5;
 			player.dir_symb = map.map[i][j];
+			player_dir();
 		}
+		else
+			ft_exit(4);
 		map.map[i][j] = '0';
 	}
 	if (map.map[i][j] == ' ')

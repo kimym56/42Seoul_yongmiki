@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   player.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yongmiki <yongmiki@42seoul.kr>             +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 18:15:03 by yongmiki          #+#    #+#             */
-/*   Updated: 2022/08/02 18:15:05 by yongmiki         ###   ########.fr       */
+/*   Updated: 2022/08/03 21:15:09 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ static void	player_rotate(void)
 	double	sin_value;
 	double	cos_value;
 
-	if ((player.move & MOVE_RIGHT) != 0)
+	if ((player.move & MOVE_LEFT) != 0)
 	{
 		sin_value = sin(-ROT_SPEED);
 		cos_value = cos(-ROT_SPEED);
 	}
-	if ((player.move & MOVE_LEFT) != 0)
+	if ((player.move & MOVE_RIGHT) != 0)
 	{
 		sin_value = sin(ROT_SPEED);
 		cos_value = cos(ROT_SPEED);
@@ -41,7 +41,6 @@ static void	player_rotate(void)
 	}
 }
 
-// FIXME: Prevent getting out of the map if needed.
 void	player_move(void)
 {
 	if ((player.move & MOVE_UP) != 0)

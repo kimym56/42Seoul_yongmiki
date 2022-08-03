@@ -1,14 +1,14 @@
 C 60,60,60      
-SO ./textures/S.xpm
+SO ./textures/blue.xpm
 
-    NO ./textures/N.xpm
+    NO ./textures/brick.xpm
 
-EA ./textures/E.xpm
+EA ./textures/grey.xpm
 
 
 F 110,110,110
 
-WE ./textures/W.xpm
+WE ./textures/wood.xpm
 
         1111111111111111111111111
         1000000000110000000000001

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyjeon <hyjeon@student.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 18:10:43 by hyjeon            #+#    #+#             */
-/*   Updated: 2022/08/02 18:12:07 by hyjeon           ###   ########.fr       */
+/*   Updated: 2022/08/03 21:13:52 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,8 @@ int	ft_atoi(const char *str)
 		nb = nb * 10 + (*str - '0');
 		str++;
 	}
+	if (*str && (*str < '0' || *str > '9'))
+		return (-1);
 	return (nb * sign);
 }
 

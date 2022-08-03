@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yongmiki <yongmiki@42seoul.kr>             +#+  +:+       +#+        */
+/*   By: yongmiki <yongmiki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 18:13:05 by yongmiki          #+#    #+#             */
-/*   Updated: 2022/08/02 18:13:07 by yongmiki         ###   ########.fr       */
+/*   Updated: 2022/08/03 21:14:43 by yongmiki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,13 @@ int	main(int argc, char **argv)
 	vars = (t_vars){0};
 	win.height = HEIGHT;
 	win.width = WIDTH;
-	player.plane_y = -0.71;
-	player.dir_x = 1;
 	if (argc != 2)
 		ft_exit(1);
 	if (!is_valid(argv[1]))
 		ft_exit(2);
 	parse(argv[1]);
 	win.mlx = mlx_init();
-	win.win = mlx_new_window(win.mlx, win.width, win.height, "Cub3d");
+	win.win = mlx_new_window(win.mlx, win.width, win.height, "cub3D");
 	win.data.img = mlx_new_image(win.mlx, win.width, win.height);
 	win.data.addr = mlx_get_data_addr(
 			win.data.img, &win.data.bpp, &win.data.length, &win.data.endian);

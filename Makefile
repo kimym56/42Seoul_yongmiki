@@ -1,4 +1,4 @@
-NAME = cub3d
+NAME = cub3D
 CC = cc
 SRCS = $(wildcard utils/*.c src/*.c)
 OBJS = $(SRCS:%.c=%.o)

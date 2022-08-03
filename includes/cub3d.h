@@ -283,6 +283,9 @@ void				fill_map(char *line, int n);
 void				parse_cell(int i, int j);
 int					parse_map(void);
 
+/* PARSING2 */
+void				player_dir(void);
+
 /* EVENTS */
 int					on_close(void);
 int					on_key_press(int keycode);
